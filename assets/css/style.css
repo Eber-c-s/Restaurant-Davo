@@ -221,6 +221,7 @@ h4, .h4{
 .nav-row{
   display:flex; align-items:center; justify-content:space-between;
   height: 84px;
+  gap: 32px;
 }
 .brand{
   font-family: var(--font-display);
@@ -228,6 +229,7 @@ h4, .h4{
   color: var(--gold);
   letter-spacing: 0.02em;
   display:flex; flex-direction:column; line-height:1;
+  flex-shrink: 0;
 }
 .brand span{
   font-family: var(--font-body);
@@ -241,6 +243,8 @@ h4, .h4{
   display:none;
   align-items:center;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .nav-links a{
   font-size: 12px;
@@ -254,7 +258,7 @@ h4, .h4{
 }
 .nav-links a:hover{ color: var(--gold-bright); }
 .nav-links a[aria-current="page"]{ color: var(--gold); border-color: var(--gold); }
-.nav-actions{ display:flex; align-items:center; gap:16px; }
+.nav-actions{ display:flex; align-items:center; gap:16px; flex-shrink:0; }
 .nav-cta{ display:none; }
 .nav-toggle{
   background:none; border:1px solid var(--line); color: var(--gold);
