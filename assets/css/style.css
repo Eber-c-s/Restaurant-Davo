@@ -344,7 +344,7 @@ body.menu-open{ overflow:hidden; }
   min-height: 100svh;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
-  background: url("../img/hero-restaurante-dia.jpeg") center/cover no-repeat;
+  background: url("../img/hero-restaurante-dia.webp") center/cover no-repeat;
   padding-top: 84px;
 }
 .hero::before{
@@ -367,7 +367,7 @@ body.menu-open{ overflow:hidden; }
 .hero__actions{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:12px; }
 .hero-sm{
   min-height: 62vh;
-  background: url("../img/restaurant-davo-fachada-noche.jpg") center/cover no-repeat;
+  background: url("../img/restaurant-davo-fachada-noche.webp") center/cover no-repeat;
 }
 .hero-sm .hero__content{ gap:18px; }
 
