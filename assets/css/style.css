@@ -333,7 +333,7 @@ body.menu-open{ overflow:hidden; }
   min-height: 100svh;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
-  background: url("../img/hero-restaurant-davo.jpg") center/cover no-repeat;
+  background: url("../img/hero-restaurante-dia.jpg") center/cover no-repeat;
   padding-top: 84px;
 }
 .hero::before{
@@ -389,9 +389,10 @@ body.menu-open{ overflow:hidden; }
 .plate--tall{ min-height: 420px; }
 .terrace-gallery{ display:grid; grid-template-columns: 1fr; gap:16px; }
 .terrace-gallery .plate{ min-height: 200px; }
-@media (min-width:700px){
+@media (min-width:1000px){
   .terrace-gallery{ grid-template-columns: 1fr 1fr; }
-  .terrace-gallery .plate{ min-height: 420px; }
+  .terrace-gallery .plate{ min-height: 280px; }
+  .terrace-gallery .plate:first-child{ grid-column: 1 / -1; min-height: 300px; }
 }
 .plate--square{ aspect-ratio: 1/1; min-height: 0; }
 .plate--wide{ aspect-ratio: 16/10; min-height:0; }
