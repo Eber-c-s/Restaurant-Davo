@@ -40,6 +40,17 @@
         toggle.focus();
       }
     });
+    document.addEventListener("click", function (e) {
+      if (
+        mobileMenu.classList.contains("is-open") &&
+        !mobileMenu.contains(e.target) &&
+        !toggle.contains(e.target)
+      ) {
+        mobileMenu.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
   /* ---------- Revelado suave al hacer scroll ---------- */
