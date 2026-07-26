@@ -299,6 +299,17 @@ h4, .h4{
 }
 .mobile-menu a[aria-current="page"]{ color: var(--gold); }
 .mobile-menu .btn{ margin-top: 24px; flex-shrink:0; }
+.mobile-menu a.btn{
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  padding: 16px 32px;
+  border: 1px solid transparent;
+  text-align: center;
+  justify-content: center;
+}
 .mobile-menu__foot{
   margin-top:24px; display:flex; flex-direction:column; gap:6px;
   color: var(--ink-faint); font-size: 12px;
@@ -333,7 +344,7 @@ body.menu-open{ overflow:hidden; }
   min-height: 100svh;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
-  background: url("../img/hero-restaurante-dia.jpg") center/cover no-repeat;
+  background: url("../img/restaurant-davo-fachada-noche.jpg") center/cover no-repeat;
   padding-top: 84px;
 }
 .hero::before{
