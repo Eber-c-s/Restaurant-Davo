@@ -283,6 +283,9 @@ h4, .h4{
   transform: translateY(-8px);
   opacity: 0;
   pointer-events: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 .mobile-menu.is-open{ opacity:1; transform:translateY(0); pointer-events:auto; }
@@ -292,14 +295,37 @@ h4, .h4{
   color: var(--ink);
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
 }
 .mobile-menu a[aria-current="page"]{ color: var(--gold); }
-.mobile-menu .btn{ margin-top: 24px; }
+.mobile-menu .btn{ margin-top: 24px; flex-shrink:0; }
 .mobile-menu__foot{
-  margin-top:auto; display:flex; flex-direction:column; gap:6px;
+  margin-top:24px; display:flex; flex-direction:column; gap:6px;
   color: var(--ink-faint); font-size: 12px;
+  flex-shrink:0;
 }
 body.menu-open{ overflow:hidden; }
+
+/* Desktop: el panel se comporta como dropdown anclado al header, no full-screen */
+@media (min-width: 860px){
+  .mobile-menu{
+    inset: auto;
+    top: 84px;
+    right: var(--margin-desktop);
+    left: auto;
+    width: min(380px, calc(100vw - 2 * var(--margin-desktop)));
+    max-height: calc(100vh - 104px);
+    padding: 24px 28px;
+    gap: 2px;
+    background: rgba(19,19,19,0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 60px rgba(0,0,0,.5);
+  }
+  .mobile-menu a{ font-size: 1.05rem; padding: 12px 2px; }
+  .mobile-menu .btn{ margin-top: 16px; }
+  .mobile-menu__foot{ margin-top: 20px; }
+}
 
 /* ---------- Hero ---------- */
 .hero{
@@ -307,7 +333,7 @@ body.menu-open{ overflow:hidden; }
   min-height: 100svh;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
-  background: url("../img/hero-restaurante-dia.jpg") center/cover no-repeat;
+  background: url("../img/hero-restaurant-davo.jpg") center/cover no-repeat;
   padding-top: 84px;
 }
 .hero::before{
@@ -361,6 +387,12 @@ body.menu-open{ overflow:hidden; }
   color: var(--ink-faint);
 }
 .plate--tall{ min-height: 420px; }
+.terrace-gallery{ display:grid; grid-template-columns: 1fr; gap:16px; }
+.terrace-gallery .plate{ min-height: 200px; }
+@media (min-width:700px){
+  .terrace-gallery{ grid-template-columns: 1fr 1fr; }
+  .terrace-gallery .plate{ min-height: 420px; }
+}
 .plate--square{ aspect-ratio: 1/1; min-height: 0; }
 .plate--wide{ aspect-ratio: 16/10; min-height:0; }
 
