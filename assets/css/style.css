@@ -344,7 +344,7 @@ body.menu-open{ overflow:hidden; }
   min-height: 100svh;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
-  background: url("../img/hero-restaurante-dia.jpg") center/cover no-repeat;
+  background: url("../img/hero-restaurante-dia.jpeg") center/cover no-repeat;
   padding-top: 84px;
 }
 .hero::before{
