@@ -344,13 +344,13 @@ body.menu-open{ overflow:hidden; }
   min-height: 100svh;
   display:flex; align-items:center; justify-content:center;
   overflow:hidden;
-  background: url("../img/restaurant-davo-fachada-noche.jpg") center/cover no-repeat;
+  background: url("../img/hero-restaurante-dia.jpg") center/cover no-repeat;
   padding-top: 84px;
 }
 .hero::before{
   content:"";
   position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(10,14,20,.55) 0%, rgba(10,14,20,.7) 55%, rgba(10,14,20,.92) 100%);
+  background: linear-gradient(180deg, rgba(10,14,20,.68) 0%, rgba(10,14,20,.8) 55%, rgba(10,14,20,.94) 100%);
   z-index:1;
 }
 .hero__motif{ display:none; }
@@ -359,11 +359,16 @@ body.menu-open{ overflow:hidden; }
   text-align:center;
   max-width: 760px;
   margin: 0 auto;
-  padding: 0 var(--margin-mobile);
+  padding: 48px var(--margin-mobile);
+  border-radius: 28px;
+  background: radial-gradient(ellipse 90% 80% at center, rgba(6,8,12,.6) 0%, rgba(6,8,12,0) 75%);
   display:flex; flex-direction:column; align-items:center; gap: 26px;
 }
 .hero__actions{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:12px; }
-.hero-sm{ min-height: 62vh; }
+.hero-sm{
+  min-height: 62vh;
+  background: url("../img/restaurant-davo-fachada-noche.jpg") center/cover no-repeat;
+}
 .hero-sm .hero__content{ gap:18px; }
 
 .scroll-cue{
