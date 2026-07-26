@@ -137,6 +137,10 @@
         var msg = whatsMsg.replace(/\{(\w+)\}/g, function (_, key) {
           return data.get(key) || "-";
         });
+        // La plantilla trae "%0A" como texto literal para marcar saltos de línea.
+        // Lo convertimos a salto de línea real ANTES de codificar, para que
+        // encodeURIComponent no lo vuelva a codificar (evita el "%0A" visible).
+        msg = msg.replace(/%0A/g, "\n");
         var url = "https://wa.me/56973603573?text=" + encodeURIComponent(msg);
         setTimeout(function () { window.open(url, "_blank", "noopener"); }, 900);
       }
